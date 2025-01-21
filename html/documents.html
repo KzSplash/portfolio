@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="banner">
+        <header>
+            <a href="../index.html" class="logo">Portfolio</a>
+            <nav>
+                <div class="togglebtn">      
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="navlinks">
+                    <li><a class="active" href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Documents <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../html/doc/r5.html">R5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#Apropos">A propos</a></li>
+                    <li><a href="index.html#Contact">Contact</a></li>
+                </ul>
+            </nav>  
+        </header>
+       
+    </section>
+    <section class="one" id="Documents">
+        <h1>Mes Documents</h1>
+        <div class="documents">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom du document</th>
+                        <th>Type</th>
+                        <th>Télécharger</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GLPI Commutateur - mails</td>
+                        <td><i class="fas fa-file-pdf"></i> PDF</td>
+                        <td><a href="docs/exemple1.pdf" download><i class="fas fa-download"></i> Télécharger</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <script type="text/javascript">
+        const toggleBtn = document.querySelector('.togglebtn');
+        const navLinks = document.querySelector('.navlinks');
+
+        toggleBtn.addEventListener('click', () => {
+            toggleBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
