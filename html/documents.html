@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo">Portfolio</a>
+        <nav>
+            <div class="togglebtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navlinks">
+                <li><a class="active" href="../index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="documents.html">Documents <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../html/doc/r5.html">R5</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Compétence <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Gérer le patrimoine informatique</a></li>
+                        <li><a href="#">Répondre aux incidents et aux demandes</a></li>
+                        <li><a href="#">Travailler en mode Projet</a></li>
+                        <li><a href="#">Organiser son développement Professionnel</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#Apropos">À propos</a></li>
+                <li><a href="../index.html#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Documents" class="documents-section">
+        <div class="documents">
+            <h1>Mes Documents</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom du document</th>
+                        <th>Type</th>
+                        <th>Télécharger</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GLPI Collecteurs - mails</td>
+                        <td><i class="fas fa-file-word"></i> ODT</td>
+                        <td><a href="doc/glpi installation.docx" download><i class="fas fa-download"></i> Télécharger</a></td>
+                    </tr>
+                    <tr>
+                        <td>GLPI Installation</td>
+                        <td><i class="fas fa-file-word"></i> ODT</td>
+                        <td><a href="doc/Collecteur Mail-GLPI.docx" download><i class="fas fa-download"></i> Télécharger</a></td>
+                    </tr>
+                    <tr>
+                        <td>Zabbix</td>
+                        <td><i class="fas fa-file-word"></i> ODT</td>
+                        <td><a href="doc/zabbix.docx" download><i class="fas fa-download"></i> Télécharger</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.togglebtn').addEventListener('click', () => {
+            document.querySelector('.togglebtn').classList.toggle('active');
+            document.querySelector('.navlinks').classList.toggle('active');
+        });
+
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
