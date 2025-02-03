@@ -264,8 +264,9 @@ header ul li a {
     justify-content: center;
   }
 }
-
-
+.social a i {
+  font-size: 2rem;
+}
 
 
 .documents-section {
