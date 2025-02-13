@@ -22,7 +22,8 @@ header {
   transition: 0.6s;
   padding: 40px 100px;
   z-index: 10000;
-background-color: #020202;
+  background-color: #020202;
+  padding: 20px 40px;
 }
 
 header.sticky {
@@ -114,11 +115,12 @@ header ul li a {
 
 .container-home {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding-top: 13rem;
+  height: 100vh;
+  padding-top: 0; 
+  gap: 25rem;
 }
-
 .container-home .home-picture {
   width: 300px;
   height: 300px;
@@ -167,6 +169,7 @@ header ul li a {
 
 .btn-group {
   margin: 45px 0;
+  
 }
 
 .btn-group .btn {
@@ -187,83 +190,7 @@ header ul li a {
   border-color: #007ced;
 }
 
-/* Responsive Styles */
 
-/* For screens 992px and below */
-@media (max-width: 992px) {
-
-  .home-text h1 {
-    font-size: 36px;
-  }
-
-  .home-text p {
-    font-size: 14px;
-  }
-
-  .btn-group {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 850px) {
-  header {
-    padding: 15px 20px;
-  }
-  .container-home{
-    flex-direction: column;
-    padding-top: 2rem;
-  }
-  .container-home .home-picture{
-    width: 250px;
-    height: 250px;
-  }
-  .home-text{
-    padding: 40px 0px;
-  }
-  .togglebtn {
-    display: flex;
-  }
-
-  .navlinks {
-    display: none;
-    flex-direction: column;
-    background: #333;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-  .navlinks.active {
-    display: flex;
-  }
-
-  .navlinks li {
-    margin: 10px 0;
-  }
-}
-
-
-@media (max-width: 576px) {
-  .home-text h1 {
-    font-size: 28px;
-  }
-
-  .home-text p {
-    font-size: 12px;
-  }
-
-  .btn-group {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .social {
-    justify-content: center;
-  }
-}
 .social a i {
   font-size: 2rem;
 }
@@ -325,17 +252,7 @@ header ul li a {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .documents table {
-    width: 100%;
-  }
 
-  .documents th,
-  .documents td {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-}
 
 
 
@@ -351,6 +268,7 @@ a:hover {
 .fas {
   margin-right: 5px;
 }
+
 .dropdown {
   position: relative;
   padding: 10px 0;
@@ -360,13 +278,18 @@ a:hover {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0px;
+  left: 0;
+  right: auto; 
+  min-width: 220px; 
+  max-height: 60vh; 
+  overflow-y: auto; 
   background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   list-style: none;
   padding: 10px 20px;
   z-index: 1000;
 }
+
 
 .dropdown:hover .dropdown-menu {
   display: block;
