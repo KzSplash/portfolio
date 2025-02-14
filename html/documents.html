@@ -11,21 +11,37 @@
 </head>
 <body>
     <header>
-        <a href="../index.html" class="logo">Portfolio</a>
+        <a href="index.html" class="logo">Portfolio</a>
         <nav>
-            <div class="togglebtn">
+            <div class="togglebtn">      
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul class="navlinks">
-                <li><a class="active" href="../index.html">Accueil</a></li>
-                <li><a href="#">Documents</a></li>
-                <li><a href="#">Compétences</a></li>
-                <li><a href="../index.html#Apropos">À propos</a></li>
-                <li><a href="../index.html#Contact">Contact</a></li>
+                <li><a class="active" href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="html/documents.html">Documents <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">R5</a></li>
+                        <li><a href="#">R4</a></li>
+                        <li><a href="#">R3</a></li>
+                        <li><a href="#">AP</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Compétence  <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Gérer le patrimoine informatique</a></li>
+                        <li><a href="#">Répondre aux incidents et aux demandes</a></li>
+                        <li><a href="#">Travailler en mode Projet</a></li>
+                        <li><a href="#">Organiser son développement Professionnel</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#Apropos">A propos</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
             </ul>
-        </nav>
+        </nav>  
     </header>
 
     <section id="Documents" class="documents-section">
