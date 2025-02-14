@@ -1,54 +1,43 @@
 /* Responsive Styles */
 
 /* For screens 1200px and below */
-@media (max-width: 1200px) {
+@media (max-width: 1800px) {
     .container-home {
-        padding-top: 10rem;
+        padding-top: 5rem;
     }
     .home-text {
         max-width: 450px;
     }
-}
-
-/* For screens 992px and below */
-@media (max-width: 992px) {
-    .home-text h1 {
-        font-size: 32px;
-    }
-    .home-text p {
-        font-size: 14px;
-    }
-    .btn-group {
-        justify-content: center;
+    header{
+        padding: 15px 300px;
     }
 }
-
-@media (max-width: 1200px) and (min-width: 850px) {
+@media (max-width: 1650px) {
     .container-home {
-        display: flex;
-        flex-direction: row; /* Garde l'image à gauche et le texte à droite */
-        justify-content: center;
-        align-items: center;
-        min-height: calc(100vh - 80px); /* Ajuste la hauteur */
-        padding: 0 5%; /* Empêche que le contenu touche les bords */
-        gap: 5rem; /* Augmente l’espace entre l’image et le texte */
-        text-align: left;
+        padding-top: 5rem;
     }
-
-    .home-picture {
-        width: 250px; /* Ajuste la taille */
-        height: 250px;
-        border: 8px solid #444;
-        margin-bottom: 0;
-    }
-
     .home-text {
-        max-width: 500px; /* Empêche que le texte s'étale trop */
-        text-align: left;
+        max-width: 450px;
+    }
+    header{
+        padding: 15px 200px;
+    }
+}
+@media (max-width: 1470px) {
+    .container-home {
+        padding-top: 5rem;
+    }
+    .home-text {
+        max-width: 450px;
+    }
+    header{
+        padding: 15px 100px;
     }
 }
 
-@media (max-width: 970px) and (min-width: 850px) {
+
+
+@media (max-width: 1200px) {
     .container-home {
         display: flex;
         flex-direction: row; /* Garde l’image à gauche et le texte à droite */
@@ -70,48 +59,52 @@
         max-width: 450px; /* Réduit la largeur du texte pour éviter qu’il soit trop compressé */
         text-align: left;
     }
-}
-@media (max-width: 970px) {
+    .home-text h1 {
+        font-size: 32px;
+    }
+    .home-text p {
+        font-size: 14px;
+    }
+    .btn-group {
+        justify-content: center;
+    }
     .togglebtn {
-        display: flex; /* Afficher le bouton hamburger */
+        display: flex;
         cursor: pointer;
     }
-
     .navlinks {
-        display: none; /* Masquer le menu classique */
+        display: none;
         flex-direction: column;
-        background: #333;
-        position: absolute;
+        position: fixed;
         top: 60px;
         right: 0;
-        width: 250px; /* Largeur du menu */
-        max-height: 80vh; /* Empêcher le débordement */
-        overflow-y: auto;
+        width: 250px;
+        background: rgba(0, 0, 0, 0.95);
         padding: 15px;
         border-radius: 10px;
-        z-index: 1000;
+        z-index: 10000;
+        transition: transform 0.3s ease-in-out;
     }
 
     .navlinks.active {
-        display: flex; /* Afficher quand le bouton hamburger est activé */
+        display: flex;
+        transform: translateX(0);
     }
+
 }
 
 
 /* For screens 850px and below */
-@media (max-width: 850px) {
+@media (max-width: 900px) {
     header {
         padding: 15px 20px;
     }
     .container-home {
-        display: flex;
-        flex-direction: column; /* Empile l’image et le texte */
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: calc(100vh - 80px); /* Ajuste la hauteur */
-        padding: 0 5%; /* Évite que le contenu touche les bords */
-        gap: 1rem;
-        text-align: center; /* Centre le texte */
+        text-align: center;
+        padding: 5% 5%;
     }
     .home-picture {
         width: 180px; /* Ajuste la taille */
